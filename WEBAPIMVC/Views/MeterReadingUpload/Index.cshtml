@@ -1,0 +1,44 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@Html.AntiForgeryToken()
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/js/CSVProcessor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/MeterReading.css"> 
+    <title>CSV Import</title>
+</head>
+<body>
+    <h2>CSV Import</h2>
+    <br />
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <div>
+                <input type="file" id="fUpload" name="files" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <input type="button" id="btnUpload" value="Submit" />
+            </div>
+        </div>
+    </form>
+    <br />
+    <div>
+        <table>
+            <tr>
+                <td>Successful Readings</td>
+                <td>Failed Readings</td>
+            </tr>
+            <tr>
+                <td id="successfulInputs"></td>
+                <td id="unsuccessfulInputs"></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+
+</html>

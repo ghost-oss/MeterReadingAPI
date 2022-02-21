@@ -1,0 +1,9 @@
+﻿table,th,td{
+    border: solid;
+    border-width: medium;
+    border-color:black;
+}
+
+tr{
+    height: 30px;
+}
