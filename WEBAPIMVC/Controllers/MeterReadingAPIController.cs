@@ -20,6 +20,7 @@ namespace WEBAPIMVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [Route("meter-reading-uploads")]
         public IActionResult Post([FromForm] IFormFile file)
         {
